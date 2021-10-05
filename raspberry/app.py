@@ -9,7 +9,7 @@ import time
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', status1=None, status2=None)
 
 def commande1():
     time.sleep(5)
@@ -25,7 +25,7 @@ async def ask1():
     thread.start()
 
     print("Réponse envoyé")
-    return index()
+    return render_template('index.html', status1=True, status2=None)
 
 
 serve(app, host='0.0.0.0', port=8000)

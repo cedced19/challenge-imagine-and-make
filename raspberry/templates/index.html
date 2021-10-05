@@ -26,12 +26,12 @@
         <tbody>
             <tr>
                 <td>Compartiment 1</td>
-                <td>vide/plein</td>
+                <td>{% if status1==None %}Inconnu{% elif status1==True %}Plein{% else %}Vide{% endif %}</td>
                 <td><a href="/ask/1">Demander 1</a></td>
             </tr>
             <tr>
                 <td>Compartiment 2</td>
-                <td>vide/plein</td>
+                <td>{% if status2==None %}Inconnu{% elif status2==True %}Plein{% else %}Vide{% endif %}</td>
                 <td><a href="/ask/2">Demander 2</a></td>
             </tr>
         </tbody>
